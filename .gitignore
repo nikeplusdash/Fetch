@@ -1,0 +1,19 @@
+.DS_Store
+.build/
+.swiftpm/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.superpowers/
+
+# Worktrees created by Claude Code sessions — each is its own git repo.
+.claude/worktrees/
+
+# Source material for the landing page's plates — the raw generations the
+# meadow and its clouds were keyed out of. Kept locally, never committed.
+# Untracked is not enough on its own: publish-public.sh copies the working
+# tree rather than the index, so this is excluded there too.
+genimages/
+
+# The generated code map. A local reading aid, not part of the project.
+codemap/

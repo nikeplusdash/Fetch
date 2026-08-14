@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>dev.fetch.Fetch</string>
+	<key>CFBundleName</key>
+	<string>Fetch</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1</string>
+	<key>CFBundleVersion</key>
+	<string>2</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Fetch connects to your Jackett or Prowlarr indexer, which usually runs on another machine on your local network.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<!-- Indexers (Jackett/Prowlarr) commonly run on a LAN host over plain
+		     HTTP, e.g. http://10.0.0.181:9696. NSAllowsArbitraryLoads is what
+		     permits that; it must appear ALONE, because ATS ignores it
+		     whenever NSAllowsLocalNetworking is also present. Debrid traffic
+		     is HTTPS regardless. -->
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+</dict>
+</plist>
